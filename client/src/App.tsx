@@ -72,7 +72,7 @@ function App() {
 
   // Delete a todo
   const handleDelete = async (id: number) => {
-    if (!window.confirm('Are you sure you want to delete this todo?')) return;
+//    if (!window.confirm('Are you sure you want to delete this todo?')) return;
 
     try {
       const response = await fetch(`${API_URL}/todos/${id}`, {
