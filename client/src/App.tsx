@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { TodoForm } from './forms';
 import { Todo, CreateTodoDto, UpdateTodoDto } from '../../shared';
 import { TodoList } from "./components/todo";
-import './App.css';
+import './App.scss';
 
 const API_URL = 'http://localhost:3001/api';
 

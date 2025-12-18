@@ -1,6 +1,6 @@
 import { Todo, UpdateTodoDto } from "../../../../../shared";
 import { TodoItem } from "../item";
-import './TodoList.css';
+import './TodoList.scss';
 
 interface TodoListProps {
   todos: Todo[];

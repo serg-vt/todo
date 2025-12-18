@@ -1,6 +1,6 @@
 import React from 'react';
 import { Modal } from "../../modal";
-import './ConfirmDialog.css';
+import './ConfirmDialog.scss';
 
 interface ConfirmDialogProps {
   isOpen: boolean;

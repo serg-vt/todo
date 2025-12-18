@@ -1,7 +1,7 @@
 import { useState, FormEvent } from 'react';
 import { CreateTodoDto } from "../../../../shared";
 
-import './TodoForm.css';
+import './TodoForm.scss';
 
 interface TodoFormProps {
   onSubmit: (dto: CreateTodoDto) => void;

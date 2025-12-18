@@ -1,0 +1,103 @@
+// Variables
+$spacing-small: 8px;
+$spacing-medium: 12px;
+$spacing-base: 16px;
+$spacing-large: 20px;
+
+$color-white: white;
+$color-text-primary: #333;
+$color-text-secondary: #666;
+$color-text-light: #999;
+$color-border: #ddd;
+$color-primary: #007bff;
+
+$border-radius: 8px;
+$border-radius-small: 4px;
+$transition-fast: 0.2s;
+
+.todo-item {
+  background: $color-white;
+  padding: $spacing-large;
+  border-radius: $border-radius;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: $spacing-base;
+  transition: transform $transition-fast, box-shadow $transition-fast;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  &.editing {
+    display: block;
+  }
+}
+
+.todo-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.todo-title {
+  margin-bottom: $spacing-small;
+  color: $color-text-primary;
+  font-size: 1.25rem;
+  word-wrap: break-word;
+}
+
+.todo-text {
+  color: $color-text-secondary;
+  line-height: 1.5;
+  margin-bottom: $spacing-medium;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.todo-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.85rem;
+  color: $color-text-light;
+}
+
+.todo-actions {
+  display: flex;
+  gap: $spacing-small;
+  flex-shrink: 0;
+
+  .btn {
+    padding: $spacing-small $spacing-base;
+    font-size: 0.9rem;
+  }
+}
+
+.todo-edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-medium;
+}
+
+.todo-title-input,
+.todo-text-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid $color-border;
+  border-radius: $border-radius-small;
+  font-size: 1rem;
+  font-family: inherit;
+
+  &:focus {
+    outline: none;
+    border-color: $color-primary;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+  }
+}
+
+.todo-text-input {
+  resize: vertical;
+}
+

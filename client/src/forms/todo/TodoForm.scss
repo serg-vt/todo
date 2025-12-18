@@ -1,0 +1,67 @@
+// Variables
+$spacing-small: 6px;
+$spacing-medium: 10px;
+$spacing-base: 16px;
+$spacing-large: 20px;
+$spacing-xl: 24px;
+
+$color-white: white;
+$color-text-primary: #333;
+$color-text-secondary: #555;
+$color-border: #ddd;
+$color-primary: #007bff;
+
+$border-radius: 8px;
+$border-radius-small: 4px;
+
+.todo-form {
+  background: $color-white;
+  padding: $spacing-xl;
+  border-radius: $border-radius;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: $spacing-large;
+
+  h2 {
+    margin-bottom: $spacing-large;
+    color: $color-text-primary;
+    font-size: 1.5rem;
+  }
+}
+
+.form-group {
+  margin-bottom: $spacing-base;
+
+  label {
+    display: block;
+    margin-bottom: $spacing-small;
+    color: $color-text-secondary;
+    font-weight: 500;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: $spacing-medium;
+    border: 1px solid $color-border;
+    border-radius: $border-radius-small;
+    font-size: 1rem;
+    font-family: inherit;
+
+    &:focus {
+      outline: none;
+      border-color: $color-primary;
+      box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+    }
+  }
+
+  textarea {
+    resize: vertical;
+  }
+}
+
+.form-actions {
+  display: flex;
+  gap: $spacing-medium;
+  margin-top: $spacing-large;
+}
+

@@ -1,0 +1,98 @@
+// Variables
+$spacing-small: 8px;
+$spacing-medium: 12px;
+$spacing-base: 16px;
+$spacing-large: 24px;
+
+$color-text-dark: #1f2937;
+$color-text-medium: #4b5563;
+$color-text-secondary: #374151;
+
+$color-bg-secondary: #e5e7eb;
+$color-bg-secondary-hover: #d1d5db;
+
+$color-danger: #ef4444;
+$color-danger-hover: #dc2626;
+$color-warning: #f59e0b;
+$color-warning-hover: #d97706;
+$color-info: #3b82f6;
+$color-info-hover: #2563eb;
+
+$border-radius: 6px;
+$transition-fast: 0.2s;
+
+.confirm-dialog {
+  padding: $spacing-large;
+  min-width: 320px;
+  max-width: 500px;
+}
+
+.confirm-dialog-title {
+  margin: 0 0 $spacing-base 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: $color-text-dark;
+}
+
+.confirm-dialog-message {
+  margin: 0 0 $spacing-large 0;
+  color: $color-text-medium;
+  line-height: 1.5;
+}
+
+.confirm-dialog-actions {
+  display: flex;
+  gap: $spacing-medium;
+  justify-content: flex-end;
+}
+
+.btn {
+  padding: $spacing-small $spacing-base;
+  border: none;
+  border-radius: $border-radius;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all $transition-fast;
+
+  &:hover {
+    transform: translateY(-1px);
+  }
+
+  &-secondary {
+    background-color: $color-bg-secondary;
+    color: $color-text-secondary;
+
+    &:hover {
+      background-color: $color-bg-secondary-hover;
+    }
+  }
+
+  &-danger {
+    background-color: $color-danger;
+    color: white;
+
+    &:hover {
+      background-color: $color-danger-hover;
+    }
+  }
+
+  &-warning {
+    background-color: $color-warning;
+    color: white;
+
+    &:hover {
+      background-color: $color-warning-hover;
+    }
+  }
+
+  &-info {
+    background-color: $color-info;
+    color: white;
+
+    &:hover {
+      background-color: $color-info-hover;
+    }
+  }
+}
+

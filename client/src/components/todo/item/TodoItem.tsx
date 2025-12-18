@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Todo, UpdateTodoDto } from "../../../../../shared";
 import { ConfirmDialog } from "../../dialog";
-import './TodoItem.css';
+import './TodoItem.scss';
 
 interface TodoItemProps {
   todo: Todo;

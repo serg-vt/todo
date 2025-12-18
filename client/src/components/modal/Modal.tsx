@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import './Modal.css';
+import './Modal.scss';
 
 interface ModalProps {
   isOpen: boolean;

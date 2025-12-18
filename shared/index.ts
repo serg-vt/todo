@@ -1,7 +1,2 @@
-import { Todo, CreateTodoDto, UpdateTodoDto } from './types';
+export type { Todo, CreateTodoDto, UpdateTodoDto } from './types';
 
-export {
-  Todo,
-  CreateTodoDto,
-  UpdateTodoDto,
-}

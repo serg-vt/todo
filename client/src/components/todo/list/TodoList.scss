@@ -1,0 +1,22 @@
+// Variables
+$spacing-base: 16px;
+$spacing-large: 20px;
+$color-white: white;
+$color-text-light: #999;
+$border-radius: 8px;
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-base;
+}
+
+.todo-list-empty {
+  background: $color-white;
+  padding: 60px $spacing-large;
+  border-radius: $border-radius;
+  text-align: center;
+  color: $color-text-light;
+  font-size: 1.1rem;
+}
+
