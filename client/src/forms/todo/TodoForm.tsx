@@ -1,5 +1,6 @@
-import { useState } from 'react';
-import { CreateTodoDto } from '../../../shared/types';
+import { useState, FormEvent } from 'react';
+import { CreateTodoDto } from "../../../../shared";
+
 import './TodoForm.css';
 
 interface TodoFormProps {
@@ -7,11 +8,11 @@ interface TodoFormProps {
   onCancel: () => void;
 }
 
-function TodoForm({ onSubmit, onCancel }: TodoFormProps) {
+const TodoForm = ({ onSubmit, onCancel }: TodoFormProps) => {
   const [title, setTitle] = useState('');
   const [text, setText] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     if (title.trim() && text.trim()) {
       onSubmit({ title: title.trim(), text: text.trim() });
@@ -22,7 +23,7 @@ function TodoForm({ onSubmit, onCancel }: TodoFormProps) {
 
   return (
     <form className="todo-form" onSubmit={handleSubmit}>
-      <h2>Create New TODO</h2>
+      <h2>Create New Item</h2>
       <div className="form-group">
         <label htmlFor="title">Title</label>
         <input
@@ -30,7 +31,7 @@ function TodoForm({ onSubmit, onCancel }: TodoFormProps) {
           id="title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-          placeholder="Enter todo title..."
+          placeholder="Enter title..."
           required
         />
       </div>
@@ -40,7 +41,7 @@ function TodoForm({ onSubmit, onCancel }: TodoFormProps) {
           id="text"
           value={text}
           onChange={(e) => setText(e.target.value)}
-          placeholder="Enter todo description..."
+          placeholder="Enter description..."
           rows={4}
           required
         />
@@ -56,4 +57,3 @@ function TodoForm({ onSubmit, onCancel }: TodoFormProps) {
 }
 
 export default TodoForm;
-

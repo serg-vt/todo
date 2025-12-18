@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import TodoList from './components/TodoList';
-import TodoForm from './components/TodoForm';
-import { Todo, CreateTodoDto, UpdateTodoDto } from '../../shared/types';
+import { TodoForm } from './forms';
+import { Todo, CreateTodoDto, UpdateTodoDto } from '../../shared';
+import { TodoList } from "./components/todo";
 import './App.css';
 
 const API_URL = 'http://localhost:3001/api';

@@ -1,5 +1,5 @@
-import { Todo, UpdateTodoDto } from '../../../shared/types';
-import TodoItem from './TodoItem';
+import { Todo, UpdateTodoDto } from "../../../../../shared";
+import { TodoItem } from "../item";
 import './TodoList.css';
 
 interface TodoListProps {

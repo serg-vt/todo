@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { Todo, UpdateTodoDto } from '../../../shared/types';
+import { Todo, UpdateTodoDto } from "../../../../../shared";
+import { ConfirmDialog } from "../../dialog";
 import './TodoItem.css';
-import { ConfirmDialog } from './ConfirmDialog';
 
 interface TodoItemProps {
   todo: Todo;
@@ -9,7 +9,7 @@ interface TodoItemProps {
   onDelete: (id: number) => void;
 }
 
-function TodoItem({ todo, onUpdate, onDelete }: TodoItemProps) {
+const TodoItem = ({ todo, onUpdate, onDelete }: TodoItemProps) => {
   const [isEditing, setIsEditing] = useState(false);
   const [title, setTitle] = useState(todo.title);
   const [text, setText] = useState(todo.text);

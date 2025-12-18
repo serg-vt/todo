@@ -2,7 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import path from 'path';
 import { initDatabase, getDatabase, saveDatabase } from './database';
-import { Todo, CreateTodoDto, UpdateTodoDto } from '../shared/types';
+import { Todo, CreateTodoDto, UpdateTodoDto } from '../shared';
 
 const app = express();
 const PORT = process.env.PORT || 3001;
