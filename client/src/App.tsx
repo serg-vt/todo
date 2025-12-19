@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { TodoForm } from './forms';
 import { Todo, CreateTodoDto, UpdateTodoDto } from '../../shared';
-import { TodoList } from "./components/todo";
+import { Header, TodoList } from "./components";
 import './App.scss';
 
 const API_URL = 'http://localhost:3001/api';
@@ -72,8 +72,6 @@ function App() {
 
   // Delete a todo
   const handleDelete = async (id: number) => {
-//    if (!window.confirm('Are you sure you want to delete this todo?')) return;
-
     try {
       const response = await fetch(`${API_URL}/todos/${id}`, {
         method: 'DELETE',
@@ -89,12 +87,11 @@ function App() {
 
   return (
     <div className="app">
-      <header className="app-header">
-        <h1>TODO App</h1>
-        <button className="btn btn-primary" onClick={() => setShowForm(!showForm)}>
-          {showForm ? 'Cancel' : '+ New TODO'}
-        </button>
-      </header>
+      <Header
+        title="TODO || ! TODO"
+        buttonTitle={showForm ? 'Cancel' : '+ Add'}
+        onButtonClick={() => setShowForm(!showForm)}
+      />
 
       <main className="app-main">
         {error && <div className="error-message">{error}</div>}

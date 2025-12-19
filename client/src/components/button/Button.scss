@@ -1,0 +1,45 @@
+@import "../../styles/palette.scss";
+
+$color-primary: $color-base-primary;
+$color-primary-hover: darken($color-base-primary, 10%);
+
+$color-secondary: $color-base-secondary;
+$color-secondary-hover: darken($color-base-secondary, 10%);
+
+$color-text-primary: $color-base-dark;
+$color-text-secondary: $color-base-neutral;
+
+$border-radius: 4px;
+$transition-time: 0.2s;
+
+.button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: $border-radius;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all $transition-time;
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  &--primary {
+    background-color: $color-primary;
+    color: $color-text-primary;
+
+    &:hover {
+      background-color: $color-primary-hover;
+    }
+  }
+
+  &--secondary {
+    background-color: $color-secondary;
+    color: $color-text-secondary;
+
+    &:hover {
+      background-color: $color-secondary-hover;
+    }
+  }
+}

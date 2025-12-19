@@ -1,9 +1,7 @@
+@import "./styles/spacing.scss";
+
 // Variables
 $max-width: 800px;
-$spacing-base: 20px;
-$spacing-small: 8px;
-$spacing-medium: 12px;
-$spacing-large: 30px;
 
 $color-primary: #007bff;
 $color-primary-hover: #0056b3;
@@ -25,78 +23,12 @@ $transition-fast: 0.2s;
 .app {
   max-width: $max-width;
   margin: 0 auto;
-  padding: $spacing-base;
-}
-
-.app-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: $spacing-large;
-  padding-bottom: $spacing-base;
-  border-bottom: 2px solid $color-border;
-
-  h1 {
-    font-size: 2rem;
-    color: $color-text-primary;
-  }
 }
 
 .app-main {
   display: flex;
   flex-direction: column;
   gap: $spacing-base;
-}
-
-// Button styles
-.btn {
-  padding: 10px 20px;
-  border: none;
-  border-radius: $border-radius;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: all $transition-fast;
-
-  &:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  }
-
-  &-primary {
-    background-color: $color-primary;
-    color: white;
-
-    &:hover {
-      background-color: $color-primary-hover;
-    }
-  }
-
-  &-success {
-    background-color: $color-success;
-    color: white;
-
-    &:hover {
-      background-color: $color-success-hover;
-    }
-  }
-
-  &-danger {
-    background-color: $color-danger;
-    color: white;
-
-    &:hover {
-      background-color: $color-danger-hover;
-    }
-  }
-
-  &-secondary {
-    background-color: $color-secondary;
-    color: white;
-
-    &:hover {
-      background-color: $color-secondary-hover;
-    }
-  }
 }
 
 // Error message
