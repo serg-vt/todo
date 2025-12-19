@@ -1,50 +1,13 @@
-@import "./styles/spacing.scss";
-
-// Variables
-$max-width: 800px;
-
-$color-primary: #007bff;
-$color-primary-hover: #0056b3;
-$color-success: #28a745;
-$color-success-hover: #218838;
-$color-danger: #dc3545;
-$color-danger-hover: #c82333;
-$color-secondary: #6c757d;
-$color-secondary-hover: #5a6268;
-
-$color-text-primary: #333;
-$color-text-secondary: #666;
-$color-border: #e0e0e0;
-
-$border-radius: 5px;
-$transition-fast: 0.2s;
-
-// Main app container
 .app {
-  max-width: $max-width;
-  margin: 0 auto;
+  background-color: #eee;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .app-main {
   display: flex;
-  flex-direction: column;
-  gap: $spacing-base;
+  flex: 1;
+  overflow-y: scroll;
 }
-
-// Error message
-.error-message {
-  background-color: #f8d7da;
-  color: #721c24;
-  padding: $spacing-medium;
-  border-radius: $border-radius;
-  border: 1px solid #f5c6cb;
-}
-
-// Loading state
-.loading {
-  text-align: center;
-  padding: 40px;
-  color: $color-text-secondary;
-  font-size: 1.2rem;
-}
-

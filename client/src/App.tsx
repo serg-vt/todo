@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { TodoForm } from './forms';
 import { Todo, CreateTodoDto, UpdateTodoDto } from '../../shared';
-import { Header, TodoList } from "./components";
+import { Footer, Header, TodoList } from "./components";
 import './App.scss';
 
 const API_URL = 'http://localhost:3001/api';
@@ -87,12 +87,7 @@ function App() {
 
   return (
     <div className="app">
-      <Header
-        title="TODO || ! TODO"
-        buttonTitle={showForm ? 'Cancel' : '+ Add'}
-        onButtonClick={() => setShowForm(!showForm)}
-      />
-
+      <Header />
       <main className="app-main">
         {error && <div className="error-message">{error}</div>}
 
@@ -113,6 +108,9 @@ function App() {
           />
         )}
       </main>
+      <Footer
+        onClick={() => setShowForm(!showForm)}
+      />
     </div>
   );
 }

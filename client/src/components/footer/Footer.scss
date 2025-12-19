@@ -1,0 +1,33 @@
+.footer {
+  position: sticky;
+  bottom: 0;
+  min-height: 70px;
+  background-color: #333333;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  border-top: 7px solid #555;
+
+  &__add-button {
+    height: 70px;
+    width: 70px;
+    border: 7px solid #555;
+    border-radius: 35px;
+    background-color: #ffff00;
+    margin-top: -38px;
+    font-size: 48px;
+    color: #333333;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      background-color: lighten(#ffff00, 20%);
+      border: 7px solid darken(#ffff00, 20%);
+      height: 80px;
+      width: 80px;
+      border-radius: 40px;
+      margin-top: -43px;
+    }
+  }
+}

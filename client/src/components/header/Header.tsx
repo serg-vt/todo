@@ -1,24 +1,9 @@
-import { Button } from "../button";
 import "./Header.scss";
 
-interface HeaderProps {
-  title: string;
-  buttonTitle: string;
-  onButtonClick: () => void;
-}
-
-const Header = ({
-  title,
-  buttonTitle,
-  onButtonClick,
-}: HeaderProps) => {
+const Header = () => {
   return (
     <header className="header">
-      <div className="header__title">{title}</div>
-      <Button
-        onClick={onButtonClick}
-        title={buttonTitle}
-      />
+      <input className="header__search" placeholder="Search..." />
     </header>
   )
 }
